@@ -1,6 +1,7 @@
 import React, { FC, useState } from "react";
 import { StyleSheet, Text } from "react-native";
 import { Appbar, Modal, Portal } from "react-native-paper";
+import HalfScreenModal from "./HalfScreenModal";
 
 interface NavBarProps {
   title: string;
@@ -17,11 +18,10 @@ const NavBar: FC<NavBarProps> = ({ title }) => {
     <Appbar.Header style={styles.navbar}>
       <Appbar.Content title={title} />
       <Appbar.Action icon="flip-to-front" onPress={toggleModal} />
-      <Portal>
-        <Modal visible={isModalVisible} onDismiss={toggleModal}>
-          <Text>Example Modal</Text>
-        </Modal>
-      </Portal>
+      <HalfScreenModal
+        isVisible={isModalVisible}
+        toggleModal={toggleModal}
+      ></HalfScreenModal>
     </Appbar.Header>
   );
 };
