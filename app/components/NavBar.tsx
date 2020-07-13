@@ -1,12 +1,6 @@
 import React, { FC, useState } from "react";
 import { StyleSheet, Text } from "react-native";
-import {
-  Appbar,
-  Modal,
-  Portal,
-  Button,
-  DefaultTheme,
-} from "react-native-paper";
+import { Appbar, Modal, Portal } from "react-native-paper";
 
 interface NavBarProps {
   title: string;

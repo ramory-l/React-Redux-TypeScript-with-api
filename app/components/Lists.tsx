@@ -1,14 +1,9 @@
 import React, { FC, useEffect } from "react";
-import {
-  StyleSheet,
-  ScrollView,
-  AppState,
-  AppStateStatic,
-  View,
-} from "react-native";
+import { StyleSheet, ScrollView, View } from "react-native";
 import { List } from "react-native-paper";
 import { useSelector, useDispatch } from "react-redux";
-import { setLists, startSetLists } from "../store/actions/lists";
+import { startSetLists } from "../store/actions/lists";
+import { AppState } from "../store/configureStore";
 
 const Lists: FC = () => {
   const dispatch = useDispatch();
